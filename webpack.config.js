@@ -13,7 +13,8 @@ let config = {
 
   // Выходной файл
   output: {
-    filename: "./js/bundle.js"
+    filename: "./js/bundle.js",
+    clean: true
   },
 
   module: {
@@ -45,21 +46,17 @@ let config = {
       // Подключаем шрифты из css
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader?name=./fonts/[name].[ext]"
-          },
-        ]
+        generator: {
+          filename: "./fonts/[name][ext]"
+        }
       },
 
       // Подключаем картинки из css
       {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
-        use: [
-          {
-            loader: "file-loader?name=./static/[name].[ext]"
-          },
-        ]
+        generator: {
+          filename: "./img/[name][ext]"
+        }
       },
     ],
   },

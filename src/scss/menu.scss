@@ -1,0 +1,74 @@
+.header-menu__icon,
+.sidebar-menu__icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.header-menu__icon--burger {
+  background-image: url(../img/icon-burger.svg);
+}
+
+.header-menu__icon--call,
+.sidebar-menu__icon--call {
+  background-image: url(../img/icon-call.svg);
+}
+
+.header-menu__icon--chat,
+.sidebar-menu__icon--chat {
+  background-image: url(../img/icon-chat.svg);
+}
+
+.header-menu__icon--profile,
+.sidebar-menu__icon--profile {
+  background-image: url(../img/icon-profile.svg);
+}
+
+.header-menu__icon--repair {
+  background-image: url(../img/icon-repair.svg);
+}
+
+.header-menu__icon--checkstatus {
+  background-image: url(../img/icon-checkstatus.svg);
+}
+
+.header-menu__item--divider {
+  background-color: #eaeaea;
+  border-radius: 0;
+  width: 2px;
+  height: 32px;
+}
+
+.header-menu__item--call,
+.header-menu__item--chat,
+.header-menu__item--profile,
+/*.header-menu ul:nth-child(2) .header-menu__item--divider*/
+header nav.header-menu ul + ul .header-menu__item--divider {
+  display: none;
+}
+
+.sidebar-menu__icon--close {
+  background-image: url(../img/icon-close.svg);
+}
+
+.sidebar-menu__icon--search {
+  background-image: url(../img/icon-search.svg);
+}
+
+.sidebar-menu__logo + button {
+  float: right;
+}
+
+body > button {
+  transition: filter .6s;
+}
+
+body > button:hover {
+  filter: grayscale(70%);
+}
